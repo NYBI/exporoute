@@ -34,15 +34,20 @@ r = ui_scalar('rayon', 60, 0, 100)
 alpha = ui_scalar('alpha', 45/2, 0, 45)
 height = ui_scalar('depth', 6, 0 ,10)
 delta = ui_scalar('delta', 6, 1, 10)
-base_length = ui_scalar('base length', 70, 0, 150)
-screw_radius = ui_scalar('screw radius', 2, 1, 8)
+screw_diameter = ui_scalar('screw diameter', 2, 1, 8)
 wood_height = ui_scalar('wood height', 10.15, 0 ,20)
+nb_crepe = ui_scalar('#crepes', 4, 1, 10)
 longest_crepe = ui_scalar('longest crepe', 100, 2, 200)
+crepe_width = ui_scalar('width of crepe', 20, 2, 200)
+tolerance = ui_scalar('tolerance', 0.1, 0.1, 2)
+
+--base_length = ui_scalar('base length', 70, 0, 150)
+base_length = (nb_crepe+2) * crepe_width
 
 function trail()
   return union{
     loop(r, alpha, height, delta, base_length),
-    translate(0, 0, height) * loop(r, alpha, wood_height - height, screw_radius/2 + 0.5, base_length)
+    translate(0, 0, height) * loop(r, alpha, wood_height - height, screw_diameter + 2*tolerance, base_length)
   }
 end
 
@@ -55,11 +60,35 @@ function plate()
         path)
 end
 
+function crepe(len)
+    l = r-delta+2*tolerance
+    w = crepe_width / 4
+    sr = math.sqrt(r*r - w*w)-l
+    oblong = translate(0, 0, -wood_height) * intersection{
+            translate(l, 0, 0) * cylinder(r, wood_height - height),
+            translate(-l, 0, 0) * cylinder(r, wood_height - height),
+        }
+    return union{
+        cube(len, crepe_width, wood_height),
+        translate(0, 0, -wood_height) * cylinder(screw_diameter, wood_height),
+        intersection{
+            oblong,
+            union{
+                translate(0, 0, -wood_height) * cube(len, crepe_width/2, wood_height),
+                translate(0, w, -25) * cylinder(sr, 50),
+                translate(0, -w, -25) * cylinder(sr, 50)
+                }
+        }
+    }
+end
+
 -- le plateau
 emit(plate())
 
 -- la plus grande crepe
-emit(translate(0, 0, wood_height) * cube(longest_crepe, 10, wood_height),2)
+for i = 1, nb_crepe, 1 do
+    emit(translate(0, (i-1)*crepe_width, wood_height) * crepe(longest_crepe / i), i)
+end
 
 -- Crepe dans le virage
-emit(translate(-r, base_length + 2 *r, wood_height) * rotate(0,0,90)*cube(longest_crepe, 10, wood_height),2)
+--emit(translate(-r, base_length + 2 *r, wood_height) * rotate(0,0,90)*crepe(),2)
