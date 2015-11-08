@@ -30,6 +30,11 @@ function loop(r, alpha, height, delta, base_length)
   }
 end
 
+if ui_scalar == nil then
+    function ui_scalar(a, b, c, d)
+        return b
+    end
+end
 r = ui_scalar('rayon', 60, 0, 100)
 alpha = ui_scalar('alpha', 45/2, 0, 45)
 height = ui_scalar('depth', 6, 0 ,10)
@@ -87,7 +92,7 @@ emit(plate())
 
 -- la plus grande crepe
 for i = 1, nb_crepe, 1 do
-    emit(translate(0, (i-1)*crepe_width, wood_height) * crepe(longest_crepe / i), i)
+    emit(translate(0, (2*i-1)*crepe_width/2, wood_height) * crepe(longest_crepe / i), i)
 end
 
 -- Crepe dans le virage
