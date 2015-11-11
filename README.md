@@ -9,7 +9,7 @@ Activités pour l'exporoute &mdash; exposition itinérante autour du numérique 
 * ?? (Langage)
 * ?? (Machine)
 
-![Binaire](./binaire/P7160134.JPG)
+![Binaire](./binaire/P7160134-728x410.JPG)
 ![Crépier](./crepier/shot0000.png) 
 
 ## Licence
