@@ -24,7 +24,9 @@ Activités pour l'exporoute &mdash; exposition itinérante autour du numérique 
 * http://expocastor.gforge.inria.fr/ qui sont les exercices du précédent mais classifiés selon le thème
 * http://lrf-blog.com/2014/12/21/logibox/
 * http://logibox.gaelgouault.com/
-
+* http://kylem.net/hardware/hardware.html
+* http://web.mit.edu/kmill/www/hardware/cardiac/CARDIAC_manual.pdf
+* http://nguyen.univ-tln.fr/ordinapoche.html
 
 ## Licence
 Travaux sous licence [CC BY-SA 3.0 FR](https://creativecommons.org/licenses/by-sa/3.0/fr/) par [Nybi.cc](https://github.com/NYBI) sur une commande de l'[Inria Nancy Grand-Est](http://www.inria.fr/centre/nancy) et la [MJC Nomade](http://mjc-nomade.fr/).
