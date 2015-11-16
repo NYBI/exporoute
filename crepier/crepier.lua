@@ -1,3 +1,9 @@
+#!/usr/bin/env icesl-vanilla
+-- This file is a CAD model for the software IceSL.
+-- One can download it at http://webloria.loria.fr/~slefebvr/icesl/
+-- This model is part of a bigger outer project: https://github.com/NYBI/exporoute
+-- License: CC BY-SA 3.0 FR for Nybi.cc
+
 function big_loop(r, d, h, alpha)
   return
     intersection(
@@ -88,14 +94,20 @@ function crepe(len)
 end
 
 -- le plateau
-emit(plate())
+--emit(plate())
 
--- la plus grande crepe
-if false then
-   for i = 1, nb_crepe, 1 do
-      emit(translate(0, (2*i-1)*crepe_width/2, wood_height) * crepe(longest_crepe / i), i)
-   end
+-- for viewing
+if true then
+	for i = 1, nb_crepe, 1 do
+		emit(translate(0, (2*i-1)*crepe_width/2, wood_height) * crepe(longest_crepe / i), i)
+	end
 end
 
+-- for cutting
+if false then
+	for i = 1, nb_crepe, 1 do
+		emit(translate(0, (3*i)*crepe_width/2, wood_height) * crepe(longest_crepe / i), 0)
+	end
+end
 -- Crepe dans le virage
 --emit(translate(-r, base_length + 2 *r, wood_height) * rotate(0,0,90)*crepe(),2)
