@@ -35,14 +35,14 @@ if ui_scalar == nil then
         return b
     end
 end
-r = ui_scalar('rayon', 60, 0, 100)
+r = ui_scalar('rayon', 50, 0, 100)
 alpha = ui_scalar('alpha', 45/2, 0, 45)
 height = ui_scalar('depth', 6, 0 ,10)
 delta = ui_scalar('delta', 6, 1, 10)
 screw_diameter = ui_scalar('screw diameter', 2, 1, 8)
 wood_height = ui_scalar('wood height', 10.15, 0 ,20)
 nb_crepe = ui_scalar('#crepes', 4, 1, 10)
-longest_crepe = ui_scalar('longest crepe', 100, 2, 200)
+longest_crepe = ui_scalar('longest crepe', 80, 2, 200)
 crepe_width = ui_scalar('width of crepe', 20, 2, 200)
 tolerance = ui_scalar('tolerance', 0.1, 0.1, 2)
 
@@ -91,8 +91,10 @@ end
 emit(plate())
 
 -- la plus grande crepe
-for i = 1, nb_crepe, 1 do
-    emit(translate(0, (2*i-1)*crepe_width/2, wood_height) * crepe(longest_crepe / i), i)
+if false then
+   for i = 1, nb_crepe, 1 do
+      emit(translate(0, (2*i-1)*crepe_width/2, wood_height) * crepe(longest_crepe / i), i)
+   end
 end
 
 -- Crepe dans le virage
