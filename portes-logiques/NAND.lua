@@ -1,3 +1,9 @@
+-- #!/usr/bin/env icesl-vanilla
+-- This file is a CAD model for the software IceSL.
+-- One can download it at http://webloria.loria.fr/~slefebvr/icesl/
+-- This model is part of a bigger outer project: https://github.com/NYBI/exporoute
+-- License: CC BY-SA 3.0 FR for Nybi.cc
+
 h = 3
 shapes = svg(Path .. 'activite-machine.svg', 90)
 for i,contour in ipairs(shapes) do
