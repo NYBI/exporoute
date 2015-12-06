@@ -10,7 +10,8 @@ Activités pour l'exporoute &mdash; exposition itinérante autour du numérique 
 * [Portes Logiques](./portes-logiques/) (Machine)
 
 ![Binaire](./binaire/P7160134-728x410.JPG)
-![Crépier](./crepier/shot0000.png) 
+![Crépier](./crepier/shot0000.png)
+![Previsulation 3D](./portes-logiques/preview-3d.png)
 
 ## Bibliographie / Inspiration
 
