@@ -8,12 +8,17 @@ Cette activité fait partie de l'[exporoute](https://github.com/NYBI/exporoute).
 Construire les portes logiques Ou, Non, Et, NOR, XOR, etc à partir de la porte logique NAND.
 
 ![Previsulation 3D](preview-3d.png)
+![Fonctionnement](mechanical-nand.png)
 
 ## Fabrication
 
 * [Découper](activite-machine-decoupe.svg)
 * Monter
 * Ajouter un ressort de rappel
+
+## Divers
+
+Vous pouvez tester le concept avec [Algodoo](http://www.algodoo.com/download/) avec [cette scène](mechanical-nand.phz).
 
 ## Licence
 Design par [Loïc Fejoz](https://github.com/loic-fejoz/) pour [Nybi.cc](https://github.com/NYBI).
