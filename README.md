@@ -7,7 +7,7 @@ Activités pour l'exporoute &mdash; exposition itinérante autour du numérique 
 * [Nombres Binaires](./binaire/) (Information)
 * [Crépier psychorigide](./crepier/) (Algorithme)
 * ?? (Langage)
-* ?? (Machine)
+* [Portes Logiques](./portes-logiques/) (Machine)
 
 ![Binaire](./binaire/P7160134-728x410.JPG)
 ![Crépier](./crepier/shot0000.png) 
