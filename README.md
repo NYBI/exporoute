@@ -28,6 +28,7 @@ Activités pour l'exporoute &mdash; exposition itinérante autour du numérique 
 * http://kylem.net/hardware/hardware.html
 * http://web.mit.edu/kmill/www/hardware/cardiac/CARDIAC_manual.pdf
 * http://nguyen.univ-tln.fr/ordinapoche.html
+* http://www.loria.fr/~mduflotk/mediation.html
 
 ## Licence
 Travaux sous licence [CC BY-SA 3.0 FR](https://creativecommons.org/licenses/by-sa/3.0/fr/) par [Nybi.cc](https://github.com/NYBI) sur une commande de l'[Inria Nancy Grand-Est](http://www.inria.fr/centre/nancy) et la [MJC Nomade](http://mjc-nomade.fr/).
